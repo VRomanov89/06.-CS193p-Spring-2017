@@ -8,20 +8,25 @@
 
 import Foundation
 
+func changeSign(operand: Double) -> Double {
+    return -operand
+}
+
 struct CalculatorBrain {
     
     private var accumulator: Double?
     
     private enum Operation {
         case constant(Double)
-        case unaryOperation
+        case unaryOperation((Double) -> Double)
     }
     
     private var operations: Dictionary<String, Operation> = [
         "π": Operation.constant(Double.pi),
         "e": Operation.constant(M_E),//M_E,
-        "√": Operation.unaryOperation,//sqrt,
-        "cos" : Operation.unaryOperation//cos
+        "√": Operation.unaryOperation(sqrt),//sqrt,
+        "cos" : Operation.unaryOperation(cos),
+        "+-": Operation.unaryOperation(changeSign)
     ]
     
     mutating func performOperation(_ symbol: String) {
@@ -29,7 +34,10 @@ struct CalculatorBrain {
             switch operation {
             case .constant(let value):
                 accumulator = value
-            case .unaryOperation:
+            case .unaryOperation(let function):
+                if accumulator != nil {
+                    accumulator = function(accumulator!)
+                }
                 break
             }
         }
