@@ -12,6 +12,7 @@
 		63FEB8771EF0BE0F00DD89D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FEB8751EF0BE0F00DD89D7 /* Main.storyboard */; };
 		63FEB8791EF0BE0F00DD89D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FEB8781EF0BE0F00DD89D7 /* Assets.xcassets */; };
 		63FEB87C1EF0BE0F00DD89D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FEB87A1EF0BE0F00DD89D7 /* LaunchScreen.storyboard */; };
+		63FEB8851EF0BE7F00DD89D7 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FEB8841EF0BE7F00DD89D7 /* FaceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		63FEB8781EF0BE0F00DD89D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63FEB87B1EF0BE0F00DD89D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63FEB87D1EF0BE0F00DD89D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63FEB8841EF0BE7F00DD89D7 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		63FEB8701EF0BE0F00DD89D7 /* FaceApp */ = {
 			isa = PBXGroup;
 			children = (
-				63FEB8711EF0BE0F00DD89D7 /* AppDelegate.swift */,
+				63FEB8831EF0BE2C00DD89D7 /* Supporting Files */,
 				63FEB8731EF0BE0F00DD89D7 /* ViewController.swift */,
+				63FEB8841EF0BE7F00DD89D7 /* FaceView.swift */,
 				63FEB8751EF0BE0F00DD89D7 /* Main.storyboard */,
+			);
+			path = FaceApp;
+			sourceTree = "<group>";
+		};
+		63FEB8831EF0BE2C00DD89D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63FEB8711EF0BE0F00DD89D7 /* AppDelegate.swift */,
 				63FEB8781EF0BE0F00DD89D7 /* Assets.xcassets */,
 				63FEB87A1EF0BE0F00DD89D7 /* LaunchScreen.storyboard */,
 				63FEB87D1EF0BE0F00DD89D7 /* Info.plist */,
 			);
-			path = FaceApp;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				63FEB8741EF0BE0F00DD89D7 /* ViewController.swift in Sources */,
 				63FEB8721EF0BE0F00DD89D7 /* AppDelegate.swift in Sources */,
+				63FEB8851EF0BE7F00DD89D7 /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
