@@ -9,6 +9,9 @@
 import UIKit
 
 class ImageViewController: UIViewController {
+    
+    //MARK: Model
+    
     var imageURL: URL? {
         didSet {
             image = nil
@@ -17,6 +20,9 @@ class ImageViewController: UIViewController {
             }
         }
     }
+    
+    //MARK: Provate Info
+    
     private func fetchImage() {
         if let url = imageURL {
             let urlContents = try? Data(contentsOf: url)
@@ -24,11 +30,6 @@ class ImageViewController: UIViewController {
                 image = UIImage(data: imageData)
             }
         }
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //view.addSubview(imageView)
-        imageURL = DemoURL.Stanford
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
