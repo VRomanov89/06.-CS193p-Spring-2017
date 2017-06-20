@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QQA-2D-3Xl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ARy-Pk-tkx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,7 +29,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Earth"/>
                                         <connections>
-                                            <segue destination="x2f-KP-kWd" kind="showDetail" identifier="Cassini" id="Ogo-Xq-JTr"/>
+                                            <segue destination="hnK-b6-6EM" kind="showDetail" identifier="Cassini" id="Ogo-Xq-JTr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81J-5k-R4R">
@@ -37,7 +37,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Cassini"/>
                                         <connections>
-                                            <segue destination="x2f-KP-kWd" kind="showDetail" identifier="Earth" id="lcT-T9-UwA"/>
+                                            <segue destination="hnK-b6-6EM" kind="showDetail" identifier="Earth" id="lcT-T9-UwA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVJ-wg-c7e">
@@ -45,7 +45,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Saturn"/>
                                         <connections>
-                                            <segue destination="x2f-KP-kWd" kind="showDetail" identifier="Saturn" id="b84-kb-qyy"/>
+                                            <segue destination="hnK-b6-6EM" kind="showDetail" identifier="Saturn" id="b84-kb-qyy"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -90,13 +90,27 @@
                             <constraint firstItem="Fpb-Eq-Fvz" firstAttribute="bottom" secondItem="068-9m-C2o" secondAttribute="top" id="e9w-Mn-Rry"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="K0h-HW-kXz"/>
                     <connections>
                         <outlet property="scrollView" destination="Fpb-Eq-Fvz" id="pYT-r8-GhO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgx-TQ-Suc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="178.56071964017991"/>
+            <point key="canvasLocation" x="1220" y="998.95052473763121"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="ec9-IF-RQM">
+            <objects>
+                <splitViewController id="ARy-Pk-tkx" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="QQA-2D-3Xl" kind="relationship" relationship="masterViewController" id="IMv-Om-bkU"/>
+                        <segue destination="hnK-b6-6EM" kind="relationship" relationship="detailViewController" id="N4o-tn-uzW"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVw-Po-61h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1857" y="628"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="23b-vU-chH">
@@ -116,8 +130,26 @@
             </objects>
             <point key="canvasLocation" x="-658.39999999999998" y="178.56071964017991"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JaG-67-1ND">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hnK-b6-6EM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i8g-Mr-N2X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="x2f-KP-kWd" kind="relationship" relationship="rootViewController" id="Rbl-kg-8yJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sap-Dw-DXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282" y="999"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b84-kb-qyy"/>
+        <segue reference="N4o-tn-uzW"/>
     </inferredMetricsTieBreakers>
 </document>
